@@ -1,0 +1,18 @@
+<phpunit
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNameSpaceSchemaLocation="http://schema.phpunit.de/3.7/phpunit.xsd"
+    backupGlobals="true"
+    bootstrap="./tests/bootstrap.php"
+    colors="false"
+    strict="true"
+    verbose="true"
+    >
+
+<testsuites>
+    <testsuite name="CsvClient Test Suite">
+        <directory suffix="Test.php">./tests/Csv/Tests</directory>
+    </testsuite>
+</testsuites>
+
+</phpunit>
+

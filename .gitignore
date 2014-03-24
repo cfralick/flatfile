@@ -1,0 +1,11 @@
+creeper
+composer.lock
+phpunit.xml
+/vendor
+/*.php
+app/**/*.csv
+app/**/*.tsv
+src/**/*.json
+app/**/*.json
+app/**/*.log
+src/**/*.log
