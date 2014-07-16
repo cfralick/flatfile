@@ -34,7 +34,14 @@ class Csv extends BaseCsvFile
 
     public function writeRows(array $rows, $mode = self::WRITEMODE)
     {
-        foreach($this->toRows($rows) as $row) {
+        $rows = $this->toRows($rows);
+        $columns = count($rows[0]);
+        foreach($rows as $row) {
+            $cols = count($row);
+            if($cols !== $columns) {
+                throw new \InvalidArgumentException('rows do not have uniform columns');
+            }
+            
             $this->writeRow($row, $mode);
         }
     }
