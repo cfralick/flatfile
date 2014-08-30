@@ -1,4 +1,4 @@
-Csv
+FlatFile 0.0.0
 ====
 
 Read and write tsv & csv.
@@ -12,7 +12,7 @@ __Basic Usage__
 ```php
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
-use FlatFile\CsvFile;;
+use FlatFile\CsvFile;
 
 $csv = new CsvFile('file.csv');
 
