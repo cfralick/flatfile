@@ -9,8 +9,8 @@
     >
 
 <testsuites>
-    <testsuite name="CsvClient Test Suite">
-        <directory suffix="Test.php">./tests/Csv/Tests</directory>
+    <testsuite name="Flat Files Test Suite">
+        <directory suffix="Test.php">./tests</directory>
     </testsuite>
 </testsuites>
 

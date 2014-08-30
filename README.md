@@ -1,20 +1,20 @@
 Csv
 ====
 
-A simple-to-use Csv reader/writer.  
+Read and write tsv & csv.
 
 __Install__  
 ```bash
-$ composer install cfralick/csv
+$ composer install cfralick/flatfile
 ```
 
 __Basic Usage__  
 ```php
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
-use Csv\Csv;
+use FlatFile\CsvFile;;
 
-$csv = new Csv('file.csv');
+$csv = new CsvFile('file.csv');
 
 $csv->writeRow(['1','2','3']);
 // writes "1","2","3"

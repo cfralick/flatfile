@@ -1,7 +1,8 @@
 {
-    "name": "cfralick/csv",
-    "description": "readable & writeable csv",
-    "license": "MIT",
+    "name": "cfralick/flatfile",
+    "description": "readable & writeable flatfiles",
+    "license": "BSD",
+    "version": "0.0.0",
     "authors": [
         {
             "name": "Clint Fralick",
@@ -10,22 +11,19 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "symfony/filesystem": ">=2.4.0",
         "keboola/csv": ">=1.1.3"
     },
     "autoload": {
         "psr-4": {
-            "Csv\\": "src/Csv/",
-            "Csv\\Tests\\": "tests/Csv/Tests/"
-        },
-        "psr-0": {
-            "Csv\\": "src/",
-            "Csv\\Tests\\": "tests/"
+            "FlatFile\\": "src/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {"FlatFile\\Tests\\": "tests/"}
     },
     "minimum-stability": "stable",
     "require-dev": {
-        "phpunit/phpunit": ">=3.7.0",
+        "phpunit/phpunit": ">=4.0.0",
         "phpunit/php-invoker": ">=1.1.3"
     }
 }
