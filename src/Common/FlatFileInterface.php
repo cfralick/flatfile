@@ -1,4 +1,8 @@
 <?php
+/**
+ * The essential write methods (borrowed from Python's csv module.
+ */
+
 namespace FlatFile\Common;
 
 interface FlatFileInterface

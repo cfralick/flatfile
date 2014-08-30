@@ -15,6 +15,7 @@ class CsvTest extends \PHPUnit_Framework_TestCase
     protected static $tmpFileName;
     protected static $row;
     protected static $rows;
+    protected static $expectedRowsWritten;
     protected $csvInstance;
 
     public static function setUpBeforeClass()
@@ -28,11 +29,14 @@ class CsvTest extends \PHPUnit_Framework_TestCase
         }
         static::$row = $row;
         static::$rows = $rows;
+        static::$expectedRowsWritten = 11;
     }
+    
     protected function setUp()
     {
         $this->csvInstance = new static::$csvClass(static::$tmpFileName);
     } 
+
     protected function tearDown()
     {
         if(is_readable(realpath(static::$tmpFileName))) {
@@ -45,10 +49,20 @@ class CsvTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertInstanceOf(static::$csvClass, $this->csvInstance);
     }
-    
-    public function testWriteRows()
+    public function testCsvClassUsesCommaDelimiter()
     {
-        $this->csvInstance->writeRows(static::$rows);
+        $this->assertEquals(',', $this->csvInstance->getDelimiter());
+    }
+    
+    public function testWriteRowsWritesCorrectNumberOfRows()
+    {
+        $written = $this->csvInstance->writeRows(static::$rows);
+        $this->assertEquals(static::$expectedRowsWritten, $written);
+    }   
+
+    public function testWriteRowsWritesCorrectContent()
+    {
+        $written = $this->csvInstance->writeRows(static::$rows);
         $rd = new static::$csvClass(static::$tmpFileName);
         foreach($rd as $r) {
             $this->assertEquals(static::$row, $r);
