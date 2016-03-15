@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Flatfile by cfralick</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Flatfile</h1>
+        <p>For writing TSV and CSV files</p>
+
+        <p class="view"><a href="https://github.com/cfralick/flatfile">View the Project on GitHub <small>cfralick/flatfile</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/cfralick/flatfile/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/cfralick/flatfile/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/cfralick/flatfile">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="flatfile-000" class="anchor" href="#flatfile-000" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>FlatFile 0.0.0</h1>
+
+<p>Read and write tsv &amp; csv.</p>
+
+<p><strong>Install</strong>  </p>
+
+<div class="highlight highlight-source-shell"><pre>$ composer install cfralick/flatfile</pre></div>
+
+<p><strong>Basic Usage</strong>  </p>
+
+<div class="highlight highlight-text-html-php"><pre><span class="pl-pse">&lt;?php</span><span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-k">require_once</span> <span class="pl-c1">__DIR__</span> <span class="pl-k">.</span> <span class="pl-s"><span class="pl-pds">'</span>/../vendor/autoload.php<span class="pl-pds">'</span></span>;</span>
+<span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">FlatFile\CsvFile</span>;</span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-smi">$csv</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-c1">CsvFile</span>(<span class="pl-s"><span class="pl-pds">'</span>file.csv<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-smi">$csv</span><span class="pl-k">-&gt;</span>writeRow([<span class="pl-s"><span class="pl-pds">'</span>1<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>2<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>3<span class="pl-pds">'</span></span>]);</span>
+<span class="pl-s1"><span class="pl-c">// writes "1","2","3"</span></span></pre></div>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/cfralick">cfralick</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-64586508-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "name": "Flatfile",
+  "tagline": "For writing TSV and CSV files",
+  "body": "FlatFile 0.0.0\r\n====\r\n\r\nRead and write tsv & csv.\r\n\r\n__Install__  \r\n```bash\r\n$ composer install cfralick/flatfile\r\n```\r\n\r\n__Basic Usage__  \r\n```php\r\n<?php\r\nrequire_once __DIR__ . '/../vendor/autoload.php';\r\nuse FlatFile\\CsvFile;\r\n\r\n$csv = new CsvFile('file.csv');\r\n\r\n$csv->writeRow(['1','2','3']);\r\n// writes \"1\",\"2\",\"3\"\r\n```\r\n\r\n",
+  "google": "UA-64586508-1",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
